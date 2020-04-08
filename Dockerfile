@@ -2,7 +2,7 @@ FROM jlesage/baseimage-gui:debian-10
 
 # Install max-home-automation.
 COPY sources.list.d/* /etc/apt/sources.list.d/
-RUN add-pkg max-home-automation-3.15
+RUN apt-get update && apt-get install max-home-automation-3.15
 
 # Set the name of the application.
 ENV APP_NAME="MAX! Home Automation"
