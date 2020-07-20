@@ -4,6 +4,7 @@ FROM jlesage/baseimage-gui:debian-10
 COPY sources.list.d/* /etc/apt/sources.list.d/
 RUN apt-get update && apt-get install -y \
     libpython3.7-dev \
+    libgnat-8 \
     max-home-automation
 
 # Set the name of the application.
